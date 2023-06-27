@@ -91,6 +91,14 @@ git subtree push --prefix dist origin gh-pages
 
 Please report any issues in using this template.
 
+/
+1.  Generate some dinosaur words
+    - call to dino ipsum
+2.  User picks dinosaur word and robot type
+3.  Generate robot
+    - call to robohash
+
+
 ## **License**
 
 [MIT](https://choosealicense.com/licenses/mit/)
