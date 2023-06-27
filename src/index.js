@@ -1,3 +1,6 @@
+import getDinos from './js/bs/Dinosaur';
+import Robot from './js/bs/Robot';
+
 import './css/fonts.css';
 import './css/styles.css';
 
@@ -6,61 +9,36 @@ const controller = {
     getRoboType: () => document.querySelector('[name="robo-type"]:checked'),
     showDinos: document.querySelector('.dinosaurs'),
     showRobos: document.querySelector('.robo-grid')
-}
+};
 
 document.querySelector('form').addEventListener('reset', () => {
     
-})
+});
 
+function createDinoList(dinos) {
+    dinos.forEach((dino) => {
+        const listItem = document.createElement('li');
+        listItem.setAttribute('id', dino);
+        listItem.appendChild(document.createTextNode(dino));
+        controller.showDinos.appendChild(listItem);
+    });
+}
 
+controller.genDinos.addEventListener("click", e => {
+    e.preventDefault();
+    getDinos().then(dinoList => createDinoList(dinoList));
+});
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// export function createDinoList(dinos){
-//     const dinoList = document.getElementById('dino-list');
-//     dinos.forEach((dino) => {
-//         const listItem = document.createAttribute('li');
-//         const radio = document.createElement('input');
-//         radio.type = 'radio';
-//         radio.name = 'dino';
-//         radio.value = dino;
-//         listItem.appendChild(radio);
-//         listItem.appendChild(document.createTextNode.apply(dino));
-//         dinoList.appendChild(listItem);
-//     });
-
-//     //https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/change_event
-//     const radioButtons = document.querySelectorAll('input[name="dino"]');
-//     radioButtons.forEach((radio) => {
-//         radio.addEventListener('change', getRobot);
-//     });
-// }
+controller.showDinos.addEventListener('click', e => {
+    const dino = e.target.id;
+    const robot = new Robot(dino);
+    const roboCard = document.createElement('figure');
+    const roboImg = document.createElement('img');
+    roboImg.src = robot.src;
+    roboImg.alt = `A cool ${dino} robot!`;
+    const roboLabel = document.createElement('figcaption');
+    roboLabel.append(document.createTextNode(dino));
+    roboCard.append(roboImg);
+    roboCard.append(roboLabel);
+    controller.showRobos.appendChild(roboCard);
+});

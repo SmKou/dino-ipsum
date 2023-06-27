@@ -4,7 +4,7 @@ const XMLHttpRequest = require('xhr2');
  * Get five dinosaur names from Dino Ipsum
  * @returns {String[]} names of dinosaurs
  */
-export function getDinos() {
+export default function getDinos() {
     const promise = new Promise((resolve, reject) => {
         const request = new XMLHttpRequest();
         const url = `https://dinoipsum.com/api/?format=json&paragraphs=1&words=5`;
@@ -21,12 +21,12 @@ export function getDinos() {
     return promise.then(getData, getError);
 }
 
-export function getData(response) {
+function getData(response) {
     const data = response[0];
     return data;
 }
 
-export function getError(response) {
+function getError(response) {
     const error = `There was an error accessing the dino ipsum data: ${response.status} ${response.statusText}`;
     return error;
 }
