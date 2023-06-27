@@ -23,8 +23,8 @@ export function getData(response) {
 }
 
 export function getError(response) {
-    
-
+    const error = `There was an error accessing the dino ipsum data: ${response.status} ${response.statusText}`;
+    return error;
 }
 
 /*

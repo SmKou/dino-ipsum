@@ -15,8 +15,7 @@ describe("getError", () => {
             statusText: 'Not Found'
         };
         const error = getError(response);
-        expect(error.status).toBe(404);
-        expect(error.statusText).toBe('Not Found');
+        expect(error).toBe("There was an error accessing the dino ipsum data: 404 Not Found");
     })
 })
 
