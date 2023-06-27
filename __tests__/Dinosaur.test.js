@@ -19,9 +19,9 @@ describe("getError", () => {
     })
 })
 
-// describe("getDinos", () => {
-//     test("Should return five dinosaur names", () => {
-//         const dinos = getDinos();
-//         expect(dinos.length).toBe(5);
-//     })
-// })
+describe("getDinos", () => {
+    test("Should return array of five dinosaur names", () => {
+        const dinos = getDinos();
+        expect(dinos.length).toBe(5);
+    })
+})
