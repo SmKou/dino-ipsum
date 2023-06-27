@@ -13,5 +13,12 @@ describe("Robot", () => {
         const dino = 'elosaurus';
         const robot = new Robot(dino, set);
         expect(robot.src).toBe('https://robohash.org/elosaurus?set=set2')
-    })
+    });
+
+    test("Should not add set if set is 1", () => {
+        const set = 1;
+        const dino = 'elosaurus';
+        const robot = new Robot(dino, set);
+        expect(robot.src).toBe('https://robohash.org/elosaurus');
+    });
 })
