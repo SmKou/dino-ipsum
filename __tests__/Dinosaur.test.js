@@ -2,9 +2,7 @@ import { getData, getError, getDinos } from '../src/js/bs/Dinosaur';
 
 describe("getData", () => { 
     test("Should return array of 5 strings", () => {
-        const response = {
-            dinos: ['a', 'b', 'c', 'd', 'e']
-        };
+        const response = [['a', 'b', 'c', 'd', 'e']];
         const data = getData(response);
         expect(data).toEqual(['a', 'b', 'c', 'd', 'e']);
     });

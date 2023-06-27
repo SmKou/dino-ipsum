@@ -18,7 +18,8 @@ export function getDinos() {
 }
 
 export function getData(response) {
-
+    const data = response[0];
+    return data;
 }
 
 export function getError(response) {
