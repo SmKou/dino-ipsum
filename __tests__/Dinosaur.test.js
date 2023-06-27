@@ -8,9 +8,17 @@ describe("getData", () => {
     });
 })
 
-// describe("getError", () => {
-
-// })
+describe("getError", () => {
+    test("Should return error status and error status text", () => {
+        const response = {
+            status: 404,
+            statusText: 'Not Found'
+        };
+        const error = getError(response);
+        expect(error.status).toBe(404);
+        expect(error.statusText).toBe('Not Found');
+    })
+})
 
 // describe("getDinos", () => {
 //     test("Should return five dinosaur names", () => {
