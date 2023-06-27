@@ -31,9 +31,4 @@ export function getError(response) {
     return error;
 }
 
-/*
-https://dinoipsum.com/api/?format=json
-https://dinoipsum.com/api/?format=text&paragraphs=3
-https://dinoipsum.com/api/?format=html&paragraphs=3&words=15
-*/
 

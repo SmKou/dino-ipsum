@@ -19,10 +19,11 @@ describe("getError", () => {
     })
 })
 
+/* https://blog.codeleak.pl/2021/11/testing-promise-rejection-with-jest.html */
 describe("getDinos", () => {
     test("Should return array of five dinosaur names", () => {
         return getDinos().then(dinos => {
             expect(dinos.length).toBe(5)
         });
-    })
+    });
 })
