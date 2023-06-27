@@ -3,9 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Node_Project_Name</title>
+    <title>Dino Ipsum</title>
 </head>
 <body>
-    
+    <main>
+        <h1>Robot Dino Ipsum</h1>
+        <p>Click 'Generate Dinosaurs' to see a list of dinosaur names. From the list, click on the ones you would like to see and a robot of the designated type will be generated.</p>
+        <form>
+            <button id="generate-dinos">Generate Dinosaurs</button>
+            <div>
+                <label for="set1">
+                    <input type="radio" id="set1" name="robo-type" value="1">
+                    Robots
+                </label>
+                <label for="set2">
+                    <input type="radio" id="set2" name="robo-type" value="2">
+                    Robo Monsters
+                </label>
+                <label for="set3">
+                    <input type="radio" id="set3" name="robo-type" value="3">
+                    Robo Heads
+                </label>
+                <label for="set4">
+                    <input type="radio" id="set4" name="robo-type" value="4">
+                    Robo Cats
+                </label>
+            </div>
+            <ul class="dinosaurs"></ul>
+            <div class="robo-grid"></div>
+        </form>
+        <!--
+            1.  Generate some dinosaur words
+                - call to dino ipsum
+            2.  User picks dinosaur word and robot type
+            3.  Generate robot
+                - call to robohash
+        -->
+    </main>
 </body>
 </html>

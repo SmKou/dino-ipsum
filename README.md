@@ -1,10 +1,10 @@
 # Node Template
 
-By: Stella Marie
+By: Stella Marie and Lindsay Warr
 
-Template repo for Node.js project with Webpack, ESLint, Babel, and Jest.
+App for robots generated with dinosaur names.
 
-View on [Github Pages](https://username.github.io/repo-name/)
+View on [Github Pages](https://smkou.github.io/dino-ipsum/)
 
 ## **Technologies Used**
 
@@ -38,36 +38,10 @@ git clone .../.git
 git pull origin main
 ```
 
-- Load packages
-
-```bash
-npm install
-```
-
-Optionally, you can remove .DS_Store from .gitignore, if you are not using a Mac.
-
 **Do not forget:**
 
 - Remove unwanted fonts from assets/fonts
 - Remove sample img from assets/img
-
-### **Change project references**
-
-package.json
-- Line 2 project name
-
-webpack.config.js
-- Line 23 title in HtmlWebpackPlugin
-
-README.md
-- Line 1 title of project
-- Line 3 developer(s) of project
-- Line 7 username and repo name in link
-
-index.html
-- Line 6 title in head
-
-Change this readme to reflect your project's purpose and setup. Also, do not forget to change the copyright. It's best to produce a license when creating the repo, hence the initial pull.
 
 ### **Change imports, exports and component files and tests**
 
