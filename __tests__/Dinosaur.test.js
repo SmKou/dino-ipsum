@@ -1,8 +1,22 @@
-import getDinos from '../src/js/bs/Dinosaur';
+import { getData, getError, getDinos } from '../src/js/bs/Dinosaur';
 
-describe("Dinosaur", () => {
-    test("Should return five dinosaur names", () => {
-        const dinos = getDinos();
-        expect(dinos.length).toBe(5);
-    })
+describe("getData", () => { 
+    test("Should return array of 5 strings", () => {
+        const response = {
+            dinos: ['a', 'b', 'c', 'd', 'e']
+        };
+        const data = getData(response);
+        expect(data).toEqual(['a', 'b', 'c', 'd', 'e']);
+    });
 })
+
+// describe("getError", () => {
+
+// })
+
+// describe("getDinos", () => {
+//     test("Should return five dinosaur names", () => {
+//         const dinos = getDinos();
+//         expect(dinos.length).toBe(5);
+//     })
+// })
