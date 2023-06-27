@@ -21,7 +21,8 @@ describe("getError", () => {
 
 describe("getDinos", () => {
     test("Should return array of five dinosaur names", () => {
-        const dinos = getDinos();
-        expect(dinos.length).toBe(5);
+        return getDinos().then(dinos => {
+            expect(dinos.length).toBe(5)
+        });
     })
 })
