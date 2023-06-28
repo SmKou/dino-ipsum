@@ -6,6 +6,7 @@ import './css/styles.css';
 
 const controller = {
     genDinos: document.querySelector('#generate-dinos'),
+    genNum: document.querySelector('#gen-number'),
     getRoboType: () => document.querySelector('[name="robo-type"]:checked'),
     showDinos: document.querySelector('.dinosaurs'),
     showRobos: document.querySelector('.robo-grid')
@@ -40,5 +41,5 @@ controller.showDinos.addEventListener('click', e => {
     roboLabel.append(document.createTextNode(dino));
     roboCard.append(roboImg);
     roboCard.append(roboLabel);
-    controller.showRobos.appendChild(roboCard);
+    controller.showRobos.prepend(roboCard);
 });
