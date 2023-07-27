@@ -12,14 +12,7 @@
             <p>Click 'Generate Dinosaurs' to see a list of dinosaur names. From the list, click on the ones you would like to see
                 and a robot of the designated type will be generated.</p>
             <form>
-                <div class="gen-options">
-                    <button id="generate-dinos" class="button-primary">Generate Dinosaurs</button>
-                    <label for="gen-number">
-                        Generate
-                        <input type="number" id="gen-number" placeholder="5" min="5" max="30">
-                        dinosaur(s)
-                    </label>
-                </div>
+                
                 <div class="set-options">
                     <label for="set1">
                         <input type="radio" id="set1" name="robo-type" value="1">
@@ -36,6 +29,14 @@
                     <label for="set4">
                         <input type="radio" id="set4" name="robo-type" value="4">
                         Robo Cats
+                    </label>
+                </div>
+                <div class="gen-options">
+                    <button id="generate-dinos" class="button-primary">Generate Dinosaurs</button>
+                    <label for="gen-number">
+                        Generate
+                        <input type="number" id="gen-number" placeholder="5" min="5" max="30">
+                        dinosaur(s)
                     </label>
                 </div>
                 <input type="reset" value="Clear Dinos and Robos">

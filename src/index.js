@@ -27,12 +27,13 @@ function createDinoList(dinos) {
 
 controller.genDinos.addEventListener("click", e => {
     e.preventDefault();
-    getDinos().then(dinoList => createDinoList(dinoList));
+    getDinos(controller.genNum.value).then(dinoList => createDinoList(dinoList));
 });
 
 controller.showDinos.addEventListener('click', e => {
     const dino = e.target.id;
-    const robot = new Robot(dino);
+    const roboType = controller.getRoboType().value;
+    const robot = new Robot(dino, roboType);
     const roboCard = document.createElement('figure');
     const roboImg = document.createElement('img');
     roboImg.src = robot.src;
